@@ -12,13 +12,14 @@ document.addEventListener("keyup", dibujarTeclado);
 var cuadrito = document.getElementById("areaDibujo");
 var papelito =  cuadrito.getContext("2d");
 
-dibujarLinea("red", 100, 100, 200, 200, papelito);
+dibujarLinea("red", 149, 149, 151, 151, papelito);
 
 
 function dibujarLinea(color, xinicial, yinicial, xfinal, yfinal, lienzo)
 {
   lienzo.beginPath();
   lienzo.strokeStyle = color;
+  lienzo.lineWidth = 3;
   lienzo.moveTo(xinicial, yinicial);
   lienzo.lineTo(xfinal, yfinal);
   lienzo.stroke();
